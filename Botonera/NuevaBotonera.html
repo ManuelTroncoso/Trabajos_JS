@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Botonera</title>
+	
+	<script>
+		var efect = false;
+		var numerosrestantes = 25;
+		var restantes = 0;
+		var numeroSinAcertar = 2;
+		var quitaefecto;
+		window.onload = function(){
+			document.getElementById('Restantes').innerHTML = restantes
+		for (var i = 1; i <= 25; i++){
+			//Creamos el boton
+			var boton = document.createElement("button");
+			//Añadirle un id
+			boton.className = 'boton';
+			//Le damos un valor al boton
+			boton.innerHTML = i;
+			//Le damos valor al id
+			boton.id = "boton"+i;
+			//Le damos un color de inicio
+			boton.style.background = "silver";
+			//Lo añadimos al elemento con id = "Botones"
+			document.getElementById('Botones').appendChild(boton);
+			//Le atribuimos una funcion onclick
+			boton.setAttribute("onclick","CambioColor(this)")
+			//Para que me los ponga de 5 en 5
+			if(i%5==0){
+					//Creamos el br
+				var salto = document.createElement("br");
+					//Añadimos en el div el br
+				document.getElementById('Botones').appendChild(salto);
+				} 
+			}
+			
+		}
+	//Array esta otra forma de apendchild
+		var numeros = [];
+		function CambioColor(x){
+			
+			if(x.style.background == "silver"){
+				x.style.background = "red";
+				numeros.push(x.innerHTML);
+				numerosrestantes = numerosrestantes -1;
+				//console.log(numeros)
+			}
+			else{	 
+				if(x.style.background == "red" && numeroSinAcertar!=0){
+			 		x.style.background = "blue"
+					numeroSinAcertar = numeroSinAcertar-1;
+					// numerosrestantes++;
+			 		}
+			 	else{
+			 		
+					if(x.style.background == "blue"){
+						numeroSinAcertar++;
+						numerosrestantes++;
+						//Hacer que el boton de random se pueda usar muchas veces
+						//numeros.slice(x.innerHTML, numeros.length-1);
+					}
+					x.style.background = "silver"
+					
+				}
+			}
+			
+			Porciento()
+		}
+		function random() {
+		quitaefecto = Math.floor((Math.random() * 25) + 1);
+		var x = quitaefecto;
+		console.log(x);
+		if(numeros.length < 25){
+			while(numeros.includes(x.toString())) {
+			x = Math.floor((Math.random() * 25) + 1);
+			}
+		CambioColor(document.getElementById('boton' + x));
+			}
+		else{
+		document.getElementById("botoncito").style.visibility = "hidden";
+			}
+			RandomEfect(x);
+			efect = true;
+		}
+
+		function Porciento(){
+			restantes = (numeroSinAcertar/numerosrestantes)*100;
+			restantes = Math.round(restantes*100)/100
+			console.log(numerosrestantes)
+			document.getElementById('Restantes').innerHTML = restantes
+			
+		}
+		function RandomEfect(x){
+			if(efect){
+				document.getElementById('boton' + x).id = "Marcado"
+				//Cuando salga de aqui tiene que desactivarse
+			}
+			else{
+				document.getElementById('boton' + x).id = x;
+			}
+			
+		}
+	</script>
+	<link rel="stylesheet" href="CSS/Botonera.css">
+	<!-- CABECERA -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body onkeydown="CompruebaLetra(event)">
+	<!-- CABECERA -->
+	<div id="barra_nav">
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="../Index.html">WEBSITE</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li><a href="../Horario.html">HORARIO</a></li>
+		      <li class="dropdown">
+		        <a class="dropdown-toggle" data-toggle="dropdown" href="#">AHORCADOS
+		        <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+							<li><a href="../Ahorcado/ahorcado.html">Ahorcado1.0</a></a></li>
+		          <li><a href="../Ahorcado_Cronometro/ahorcado.html">Ahorcado2.0</a></a></li>
+				  <!--  <li><a href="#">Page 1-2</a></li>
+		          <li><a href="#">Page 1-3</a></li> -->
+				</ul>
+				<li><a href="#">BOTONERA</a></li>
+				<li><a href="../Cronometro/Cronometro.html">CRONOMETRO</a></li>
+				<li><a href="../Adivino/Adivino.html">ADIVINO</a></li>
+		      </li>
+		     <!--  <li><a href="#">Page 2</a></li>
+		      <li><a href="#">Page 3</a></li>  -->
+		    </ul>
+		  </div>
+		</nav>
+	</div>
+	<div id="brandom"><button onclick="random()" id="botoncito">Random</button></div>
+	<div id = "Botones">	
+	</div>
+	<div id="Restantes"></div>
+</body>
+</html>

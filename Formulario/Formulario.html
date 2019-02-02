@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Formulario.js"></script>
+    <!-- Letra --><link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="Css/Formulario.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+    <title>Formulario</title>
+</head>
+<body class="container">
+<div>
+    <h1 id="name">Test SQL</h1>
+<form method="post" enctype="multipart/form-data" onsubmit="return Valida(this)">
+    <div id="p1" class="show">
+        <p>Palabras que usas para una consulta de datos</p>
+        <label><input type="checkbox" id="c1" name="c1"> 
+        SELECT</label>
+       <label> <input type="checkbox" id="c2" name="c2"> 
+        SELECCION </label>
+       <label> <input type="checkbox" id="c3" name="c3">
+        FROM </label>
+       <label> <input type="checkbox" id="c4" name="c4">
+        HERE</label>
+    </div>
+    <div id="p2" class="hidden">
+        <p>¿Qué significa SQL?</p>
+        <label><input type="radio" id="r1" name="r1" value="Opcion 1">
+        Structured Query Language</label>
+        <label> <input type="radio" id="r2" name="r1" value="Opcion 2">
+        Structured Question Language</label> 
+        <label><input type="radio" id="r3" name="r1" value="Opcion 3">
+        Strong Question Language</label> 
+        <label><input type="radio" id="r4" name="r1" value="Opcion 4">
+        Status Query Lenguage</label>
+    </div>
+    <div id="p3" class="hidden">
+        <p>¿Cómo se borra toda una base de datos con SQL?</p>
+        <select class="form-control" id="s1">
+            <option value="-1">Elige una de las siguientes opciones</option>
+            <option value ='1'>DELETE DATABASE</option>
+            <option value ='2'>DROP DATABASE</option>
+            <option value ='3'>ERASE DATABASE </option>
+            <option value ='4'>Todas las anteriores son validas</option>
+        </select>
+      </div>
+    <div id="p4" class="hidden">
+        <p>En una cláusula LIKE, ¿cómo se obtienen todos los nombres de personas que comienzan con "Juan"?</p>
+                <br>
+                <textarea name="comentarios" rows="10" placeholder="Escribe aquí la respuesta" cols="40" id="ct1"></textarea> 
+                <br>
+    </div>
+    <br>
+</form>
+<div id="preg" ></div>
+<div id="botones">
+<button onclick="proximapregunta(this)" id="ant" disabled > Anterior</button>
+<button onclick="analizarRespuesta()" id='rev'>Revisar</button>
+<button onclick="proximapregunta(this)" id="sig">Siguiente</button>
+
+</div>
+
+<p id='punt'>Puntuación: </p>
+
+</body>
+</html>

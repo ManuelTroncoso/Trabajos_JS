@@ -1,0 +1,71 @@
+*{
+    font-family: 'Work Sans', sans-serif;
+}
+form label{
+    background-color:silver;
+    display: block;
+    margin-right: 35%;
+    margin-left: 35%;
+    margin-top: 15px;
+    border:1px solid silver;
+    padding: 8px;
+    border-radius: 10px;
+}
+label:hover{
+    background-color: grey;
+    border:1px solid blue;
+    padding: 8px;
+
+}
+h1#name{
+    text-align: center;
+    background-color: rgba(128,128,128,0.25);
+    background-position: -10px -30px;
+}
+p{
+    text-align: center;
+    color:black;
+}
+
+select.form-control{
+    margin-top:80px;
+    margin-right: 35%;
+    margin-left: 35%;
+    width: 30%;
+}
+#botones{
+    text-align: center;
+}
+#rev{
+    margin-top: 10px;
+}
+.boton{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border:none;
+	background: grey;
+}
+#ant:hover,#rev:hover,#sig:hover{
+    font-weight: bold;
+}
+#preg{
+    text-align: center;
+}
+div textarea{
+    margin-right: 35%;
+    margin-left: 35%;
+}
+#punt{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.show{
+    height: 242px;
+}
+
+p{
+    font-size: 15px;
+}

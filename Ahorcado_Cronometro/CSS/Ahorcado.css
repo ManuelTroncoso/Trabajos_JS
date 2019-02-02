@@ -1,0 +1,92 @@
+/*Ahorcado.css*/
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:500');
+
+#titulo{
+	text-align: center;
+	font-size: 100px;
+	font-family: 'Amatic SC', cursive;
+}
+
+#contenedor{
+	width: 40%;
+	float: right;
+	background-color:beige;
+	margin-right: 10%;
+		font-family: 'Rajdhani', sans-serif;
+}
+img{
+	width: 50%;
+}
+#letras{
+	font-size: 100px;
+	text-align: center;
+
+
+}
+
+#contador{
+	text-align: right;
+	margin-right: 1%;
+	margin-top: 1%;
+	width: 48%;
+	float: right;
+
+}
+#contador:before{
+ content: "Número de errores: ";
+} 
+#LetrasSalidas{
+	text-align: center;
+	font-size: 20px;
+}
+img{
+	display:none;
+	float:left;
+}
+#loser{
+	position: absolute;
+	display:none;
+	 margin-left: 10%;
+	 width: 40%;
+  	/*margin-right: auto;*/
+}
+#correct{
+	position: absolute;
+	display:none;
+	margin-left: 10%;
+	width: 40%;
+}
+#abecedario{
+	text-align: center;
+	font-size: 20px;
+	margin-left: 10px;
+}
+#siguiente{
+	float: right;
+	margin-bottom: 10px;
+	margin-right:10px;
+	/* font-weight: bolder; */
+	font-size: 15px;
+}
+#aciertos:before{
+	margin-left: 10px;
+	content: "Número de aciertos: "
+}
+#Fallos:before{
+	margin-left: 10px;
+	content: "Número de fallos: "
+}
+button:disabled{
+	background-color: grey;
+	border: grey;
+}
+#cronometro{
+	float: left;
+	margin-left: 1%;
+	margin-top: 1%;
+	width: 48%;
+}
+
+

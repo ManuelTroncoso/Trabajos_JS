@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Mystery Quest";
+    src: url("digital-7.ttf");
+}
+#contenedor{
+    font-family: 'Mystery Quest';
+}
+#contenedor, #boton{
+    width: 75%;
+}
+
+#contenedor div{
+    font-size: 90px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: white;  
+    float: left;
+    width: 110px;
+}
+#ultimos{
+    font-size: 20px;
+    margin-top: 175px;
+    margin-bottom: 20px;
+    color: white;  
+    float: left;
+    margin-left: -300px;
+}
+
+#contenedor{
+    margin: 20px auto;
+    margin-left: 50px
+}
+button{
+    width: 100px;
+    height: 50px;
+}
+#contenedor #boton{
+    margin-left: 125px;
+    font-size: 20px;
+    color: black;
+    margin-top: 100px;
+}
+body{
+    background: url(https://cdn.pixabay.com/photo/2016/03/23/12/53/clock-1274699_960_720.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

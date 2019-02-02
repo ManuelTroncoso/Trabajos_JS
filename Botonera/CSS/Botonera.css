@@ -1,0 +1,52 @@
+*{
+	box-sizing: border-box;
+}
+#Botones, #brandom, #Restantes{
+	float: left;
+	text-align: center;
+	width: 100%;
+	margin-top: 35px;
+}
+.boton {
+	   width: 50px;
+	   height: 50px;
+	   margin:10px;
+	   border-radius: 50%;
+	   border:none;
+	   background: silver;
+
+
+}
+.boton:hover{
+	/*width: 55px;
+	height: 55px;
+	box-shadow: 2px 2px grey;*/
+	transition: 0.5s;
+	transform: rotate(-360deg);
+
+}
+#color #boton{
+	background-color: red;
+}
+#botoncito{
+	height: 35px;
+	border-radius: 15%;
+	border:none;
+	background: silver;
+	
+}
+#brandom{
+	margin-top: 10px;
+}
+#Restantes::after{
+	content: " %"
+}
+#Marcado{
+	transition: 1s;
+	transform: rotate(-1080deg);
+	position: relative;
+	width: 55px;
+	height: 55px;
+	margin:7px;
+	box-shadow: 2px 2px grey;
+}
